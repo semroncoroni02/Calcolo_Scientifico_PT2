@@ -55,7 +55,7 @@ def avvia_gui():
     # Finestra principale
     root = tk.Tk()
     root.title("Compressione JPEG semplificata con DCT2")
-    root.geometry("600x500")
+    root.geometry("650x600")
 
     path_var = tk.StringVar()
     f_var = tk.StringVar()
@@ -115,7 +115,7 @@ def get_user_inputs():
 
     root = tk.Tk()
     root.title("📷 Seleziona immagine e parametri DCT2")
-    root.geometry("550x650")
+    root.geometry("550x750")
     root.configure(bg="#f0f0f0")
 
     tk.Label(root, text="SCEGLI IMMAGINE .bmp (grayscale):", bg="#f0f0f0", font=("Segoe UI", 15)).pack(pady=(15, 5))
@@ -141,4 +141,3 @@ def get_user_inputs():
     root.mainloop()
 
     return selected_file["path"], selected_F["value"], selected_d["value"]
-
