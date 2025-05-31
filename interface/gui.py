@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import filedialog, ttk, messagebox
 
 # Esempio di valori predefiniti per F
-VALORI_F = [4, 8, 16, 32, 64]
+VALORI_F = [2, 4, 8, 16, 32, 64, 128, 256]
 
 
 def avvia_gui():
@@ -115,7 +115,7 @@ def get_user_inputs():
 
     root = tk.Tk()
     root.title("📷 Seleziona immagine e parametri DCT2")
-    root.geometry("450x500")
+    root.geometry("550x650")
     root.configure(bg="#f0f0f0")
 
     tk.Label(root, text="SCEGLI IMMAGINE .bmp (grayscale):", bg="#f0f0f0", font=("Segoe UI", 15)).pack(pady=(15, 5))
