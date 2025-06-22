@@ -45,12 +45,11 @@ def main_1():
     plot_timings(sizes, times_custom, times_fast)
 
 
-def load_image_as_gray_array(path):
-    img = Image.open(path).convert('L')  # Converti in scala di grigi
-    return np.array(img)
-
-
 def main_2():
+    def load_image_as_gray_array(path):
+        img = Image.open(path).convert('L')  # Converti in scala di grigi
+        return np.array(img)
+
     # 1. Ottieni input dalla GUI
     image_path, F, d = get_user_inputs()
 
@@ -69,18 +68,23 @@ def main_2():
     # 6. Visualizza originale e compressa
     fig, axs = plt.subplots(1, 2, figsize=(10, 5))
     axs[0].imshow(original_array, cmap='gray')
-    axs[0].set_title('Originale')
+    axs[0].set_title('Originale', fontsize=15)
     axs[0].axis('off')
 
     axs[1].imshow(compressed_array, cmap='gray')
-    axs[1].set_title(f'Compressione: F={F}, d={d}')
+    axs[1].set_title(f'Compressione: F={F}, d={d}', fontsize=15)
     axs[1].axis('off')
 
-    plt.suptitle("Risultato della Compressione DCT2", fontsize=16)
+    plt.suptitle("RISULTATO COMPRESSIONE\n", fontsize=20, fontweight="bold")
     plt.tight_layout()
     plt.show()
 
 
 if __name__ == "__main__":
-    main_1()
-    main_2()
+    print("\033[92mDigitare [1] per PRIMA PARTE\nDigitare [2] per SECONDA PARTE\n↓ ")
+    sel = input()
+
+    if sel == '1':
+        main_1()
+    else:
+        main_2()
