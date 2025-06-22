@@ -76,6 +76,7 @@ def main_2():
     axs[1].set_title(f'Compressione: F={F}, d={d}')
     axs[1].axis('off')
 
+    plt.suptitle("Risultato della Compressione DCT2", fontsize=16)
     plt.tight_layout()
     plt.show()
 
