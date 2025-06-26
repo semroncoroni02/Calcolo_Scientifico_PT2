@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 def plot_timings(sizes, times_custom, times_fast):
     plt.figure(figsize=(10, 6))
     plt.semilogy(sizes, times_custom, 'o-', label='DCT2 Custom')
